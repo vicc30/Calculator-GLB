@@ -45,8 +45,6 @@ window.onkeyup = (e) => {
     const regExEqual = /(=)+/;
 
     const key = e.key;
-    console.log(e.key);
-    //Cases number or operation or equal or delete
     if (key.match(regExNum)) {
         calculator.appendNumber(key);
         calculator.updateDisplay();

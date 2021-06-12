@@ -15,16 +15,17 @@ html {
 
 .app {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
   align-items: center;
 }
 
 .app__title {
   grid-column-start: 1;
-  grid-column-end: 7;
+  grid-column-end: 6;
   text-align: center;
   min-height: 3rem;
+  font-size: 3rem;
 }
 
 .app__instructions {
@@ -32,7 +33,15 @@ html {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 7;
+  font-size: 1.5rem;
+}
+.app__instructions__title{
   text-align: center;
+}
+
+.app__instructions__list {
+  list-style: inside;
+  margin-top: 1.5rem;
 }
 
 .app__calculator {
@@ -60,8 +69,12 @@ html {
   border-radius: 1rem 1rem 0 0;
   text-align: right;
   padding: 1rem 1rem 0 0;
+  min-height: 4.4rem;
 }
-
+  .app__calculator__button:hover,
+  .app__calculator__doubleButton:hover {
+    cursor: pointer;
+  }
 .app__calculator__display__current {
   font-size: 2rem;
   margin-top: 0.5rem;
@@ -92,15 +105,31 @@ html {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  .app__instructions{
+    grid-column-start: 3;
+  }
   .app__signature {
     grid-column-start: 1;
     grid-column-end: 4;
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .app {
     display: flex;
     flex-direction: column;
+  }
+
+  .app__instructions {
+    margin: 1.5rem 0;
+  }
+
+  .app__instructions__title{
+    font-size: 1.6rem;
+  }
+
+  .app__instructions__list {
+    list-style: none;
+    text-align: left;
   }
 }

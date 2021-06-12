@@ -6,18 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator GLB</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
     <main class="app">
         <h1 class="app__title">Calculator</h1>
         <aside class="app__instructions">
+            <h2 class="app__instructions__title">Instructions</h2>
+            <ul class="app__instructions__list">
+                <li class="app__instructions__list__element">
+                    Write your operation
+                </li>
+                <li class="app__instructions__list__element">
+                    Current value shows on display's bottom.
+                </li>
+                <li class="app__instructions__list__element">
+                    Previous value and operation shows on display's top.
+                </li>
+                <li class="app__instructions__list__element">
+                    Keyboard support
+                </li>
+                <li class="app__instructions__list__element">
+                    Division is made with key "/"
+                </li>
+                <li class="app__instructions__list__element">
+                    Multiply is made with key "*"
+                </li>
+                <li class="app__instructions__list__element">
+                    Current value shows on display's top.
+                </li>
+                <li>
+                    Equals is made with the key enter.
+                </li>
+                <li class="app__instructions__list__element">
+                    Delete is made with backspace
+                </li>
+            </ul>
         </aside>
         <section class="app__calculator">
             <div class="app__calculator__display">
-                <div data-previous class="app__calculator__display__previous" id="previous">10+1</div>
-                <div data-current class="app__calculator__display__current" id="current">12345</div>
+                <div data-previous class="app__calculator__display__previous" id="previous"></div>
+                <div data-current class="app__calculator__display__current" id="current"></div>
             </div>
             <button data-number class="app__calculator__button">7</button>
             <button data-number class="app__calculator__button">8</button>
@@ -42,7 +72,7 @@
             <p>Made by Victor Cruz</p>
         </footer>
     </main>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
