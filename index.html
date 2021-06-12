@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,39 @@
     <title>Calculator GLB</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <h1>Initial</h1>
-    <script src="./main.js"></script>
+    <main class="app">
+        <h1 class="app__title">Calculator</h1>
+        <aside class="app__instructions">
+        </aside>
+        <section class="app__calculator">
+            <div class="app__calculator__display">
+                <div data-previous class="app__calculator__display__result" id="result"></div>
+            </div>
+            <button data-number class="app__calculator__display__button">7</button>
+            <button data-number class="app__calculator__display__button">8</button>
+            <button data-number class="app__calculator__display__button">9</button>
+            <button data-operation class="app__calculator__display__button" aria-label="divide">÷</button>
+            <button data-number class="app__calculator__display__button">4</button>
+            <button data-number class="app__calculator__display__button">5</button>
+            <button data-number class="app__calculator__display__button">6</button>
+            <button data-operation class="app__calculator__display__button" aria-label="multiply">x</button>
+            <button data-number class="app__calculator__display__button">1</button>
+            <button data-number class="app__calculator__display__button">2</button>
+            <button data-number class="app__calculator__display__button">3</button>
+            <button data-operation class="app__calculator__display__button" aria-label="rest">-</button>
+            <button data-number class="app__calculator__display__button" aria-label="point">.</button>
+            <button data-number class="app__calculator__display__button">0</button>
+            <button data-delete class="app__calculator__display__button" aria-label="delete">DEL</button>
+            <button data-operation class="app__calculator__display__button" aria-label="sum">+</button>
+            <button data-ac class="app__calculator__display__doubleButton" aria-label="All clear">AC</button>
+            <button data-equal class="app__calculator__display__doubleButton" aria-label="equal">=</button>
+        </section>
+        <footer class="app__signature">
+            <p>Made by Victor Cruz</p>
+        </footer>
+    </main>
 </body>
+
 </html>
