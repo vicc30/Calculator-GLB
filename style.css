@@ -6,6 +6,7 @@
 
 :root {
   --gray: #efefef;
+  --dark-gray: #2a2c2c;
 }
 
 html {
@@ -44,7 +45,6 @@ html {
   margin: auto;
   min-width: 30rem;
   min-height: 30rem;
-  border: 0.1rem solid var(--gray);
   border-radius: 1rem 1rem 0 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -55,10 +55,23 @@ html {
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
-  min-height: 3.5rem;
+  background-color: var(--dark-gray);
+  color: var(--gray);
+  border-radius: 1rem 1rem 0 0;
+  text-align: right;
+  padding: 1rem 1rem 0 0;
 }
 
-.app__calculator__display__doubleButton {
+.app__calculator__display__current {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.app__calculator__display__previous {
+  font-size: 1.5rem;
+}
+
+.app__calculator__doubleButton {
   grid-column: span 2;
 }
 
