@@ -21,11 +21,16 @@ export default class Calculator {
         this.currentText += number.toString();
     }
 
+    toggleSign() {
+        if(this.currentText){
+            const toNumber = parseFloat(this.currentText);
+            this.currentText = (toNumber * -1).toString();
+        }
+    }
+
     chooseOperation(operation) {
         if (this.currentText === '') return;
-        if (this.currentText !== 0) {
-            this.compute();
-        }
+        if (this.currentText !== 0) this.compute();
         this.operation = operation;
         this.previousText = this.currentText;
         this.currentText = "";
@@ -35,14 +40,14 @@ export default class Calculator {
 
         const prev = parseFloat(this.previousText);
         const current = parseFloat(this.currentText);
-        let computation
-
+        let computation;
         if (isNaN(prev) || isNaN(current)) return;
 
         if (this.operation === '+') computation = prev + current;
         else if (this.operation === '-') computation = prev - current;
         else if (this.operation === 'x') computation = prev * current;
         else if (this.operation === '÷') computation = prev / current;
+        else if (this.operation === '%') computation = prev / 100;
         else return;
         this.currentText = computation;
         this.operation = undefined;

@@ -7,6 +7,8 @@ const deleteButton = document.querySelector('[data-delete]');
 const acButton = document.querySelector('[data-ac]');
 const previousText = document.querySelector('[data-previous]');
 const currentText = document.querySelector('[data-current]');
+const percentButton = document.querySelector('[data-percent]');
+const toggleSign = document.querySelector('[data-toggle]');
 
 const calculator = new Calculator(previousText, currentText);
 
@@ -22,6 +24,18 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText);
         calculator.updateDisplay();
     });
+});
+
+percentButton.addEventListener('click', (button) => {
+    calculator.chooseOperation(button.target.outerText);
+    calculator.appendNumber('0');
+    calculator.compute();
+    calculator.updateDisplay();
+});
+
+toggleSign.addEventListener('click', (button) => {
+    calculator.toggleSign();
+    calculator.updateDisplay();
 });
 
 equalButton.addEventListener('click', button => {
@@ -51,14 +65,13 @@ window.onkeyup = (e) => {
     } else if (key.match(regExOp)) {
         calculator.chooseOperation(key);
         calculator.updateDisplay();
-    } else if (key.match(regExEqual) || key === 'Enter') {
+    } else if (key === '%') {
+        calculator.chooseOperation('%');
+        calculator.appendNumber('0');
         calculator.compute();
         calculator.updateDisplay();
     } else if (key === 'Backspace') {
         calculator.delete();
         calculator.updateDisplay();
-    } else if (key === 'Escape') {
-        calculator.clear();
-        calculator.updateDisplay();
-    }
+    } 
 }
