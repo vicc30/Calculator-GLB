@@ -40,11 +40,11 @@ html {
   grid-row-end: 7;
   font-size: 1.5rem;
 }
-.app__instructions__title {
+.instructions__title {
   text-align: center;
 }
 
-.app__instructions__list {
+.instructions__list {
   list-style: inside;
   margin-top: 1.5rem;
 }
@@ -64,7 +64,7 @@ html {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.app__calculator__display {
+.calculator__display {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
@@ -77,41 +77,41 @@ html {
   min-height: 5rem;
 }
 
-.app__calculator__button,
-.app__calculator__doubleButton {
+.calculator__button,
+.calculator__doubleButton {
   transition: background-color 0.6s, color 0.1s;
   font-weight: 600;
 }
 
-.app__calculator__button:hover,
-.app__calculator__doubleButton:hover {
+.calculator__button:hover,
+.calculator__doubleButton:hover {
   cursor: pointer;
   background-color: var(--color-hover);
 }
 
-.app__calculator__button:active,
-.app__calculator__doubleButton:active {
+.calculator__button:active,
+.calculator__doubleButton:active {
   cursor: pointer;
   background-color: var(--color-active);
   color: var(--gray);
 }
 
-.app__calculator__display__current {
+.display__current {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 0.5rem;
 }
 
-.app__calculator__display__previous {
+.display__previous {
   font-size: 1.5rem;
 }
 
-.app__calculator__doubleButton,
-.app__calculator__button {
+.calculator__doubleButton,
+.calculator__button {
   font-size: 2rem;
 }
 
-.app__calculator__doubleButton {
+.calculator__doubleButton {
   grid-column: span 2;
 }
 
@@ -154,11 +154,11 @@ html {
     margin: 1.5rem 0;
   }
 
-  .app__instructions__title {
+  .instructions__title {
     font-size: 1.6rem;
   }
 
-  .app__instructions__list {
+  .instructions__list {
     list-style: none;
     text-align: left;
   }
